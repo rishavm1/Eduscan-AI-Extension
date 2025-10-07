@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduScan AI - Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Roboto', sans-serif;
+      background: #FDFBF7;
+      color: #202124;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .logo-icon {
+      font-size: 40px;
+    }
+
+    h1 {
+      color: #202124;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #3C4043;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      background: #FDFBF7;
+      border: 1px solid #DADCE0;
+      border-radius: 8px;
+      color: #202124;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #4285F4;
+      box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+    }
+
+    button {
+      padding: 12px 32px;
+      background: white;
+      color: #4285F4;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+      border: 1px solid #4285F4;
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 12px;
+      background: #E6F4EA;
+      color: #1E8E3E;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      display: none;
+    }
+
+    .status.error {
+      background: #FCE8E6;
+      color: #D93025;
+    }
+
+    .status.show {
+      display: block;
+    }
+
+    .info {
+      background: white;
+      padding: 20px;
+      border-left: 4px solid #4285F4;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #3C4043;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .info strong {
+      color: #202124;
+      font-weight: 500;
+    }
+
+    .info a {
+      color: #4285F4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="logo-icon">⚙️</span>
+    <h1>EduScan AI Settings</h1>
+  </div>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="apiKey">Google Generative AI API Key:</label>
+      <input type="text" id="apiKey" placeholder="Enter your API key">
+    </div>
+
+    <button id="saveBtn">Save Settings</button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="info">
+    <strong>How to get your API key:</strong><br>
+    1. Visit <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a><br>
+    2. Create or select a project<br>
+    3. Generate an API key<br>
+    4. Paste it above and click Save<br><br>
+    <strong>Note:</strong> Your API key is stored locally and never shared.
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduScan AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-area">
+        <span class="logo-icon">🧠</span>
+        <div class="logo-text">
+          <h1>EduScan AI</h1>
+          <p class="subtitle">Smart Learning & Coding Assistant</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mode-section">
+      <label for="mode">Select Mode:</label>
+      <select id="mode">
+        <option value="student">Student</option>
+        <option value="developer">Developer</option>
+      </select>
+    </div>
+
+    <div id="studentControls" class="controls-section">
+      <label for="task">Task:</label>
+      <select id="task">
+        <option value="summarize">Summarize</option>
+        <option value="explain">Explain in simple words</option>
+        <option value="keypoints">List key points</option>
+        <option value="notes">Make study notes</option>
+      </select>
+
+      <label for="language">Translate to:</label>
+      <input type="text" id="language" placeholder="Optional: translate summary into another language...">
+    </div>
+
+    <div id="developerControls" class="controls-section hidden">
+      <label for="devTask">Task:</label>
+      <input type="text" id="devTask" placeholder="e.g., Explain this code, Find bugs, Optimize">
+    </div>
+
+    <div class="actions">
+      <button id="scanBtn" class="btn-secondary">Scan Page</button>
+      <div id="devActions" class="hidden file-upload-area">
+        <label class="file-upload-btn">
+          📷 Upload Code Image
+          <input type="file" id="imageUpload" accept="image/*">
+        </label>
+        <span id="fileName" class="file-name"></span>
+      </div>
+      <button id="analyzeBtn" class="btn-primary">Analyze</button>
+    </div>
+
+    <div class="content-area">
+      <label for="contentBox">Content:</label>
+      <textarea id="contentBox" placeholder="Paste text or code here"></textarea>
+    </div>
+
+    <div class="status-area">
+      <div id="status" class="status">Ready</div>
+      <div id="loader" class="loader hidden">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="output-section">
+      <label>Result:</label>
+      <div id="output" class="output-box"></div>
+    </div>
+
+    <div class="footer">
+      <a href="#" id="optionsLink">⚙️ Settings</a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
