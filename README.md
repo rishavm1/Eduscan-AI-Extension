@@ -22,7 +22,7 @@ AI-powered Chrome Extension for students and developers. Analyze webpages, summa
 1. Open Chrome → `chrome://extensions/`
 2. Enable **Developer mode** (top-right)
 3. Click **Load unpacked**
-4. Select the `NASA2` folder
+4. Select  `Your` folder
 5. Click the extension icon
 
 ## Setup
@@ -55,3 +55,7 @@ AI-powered Chrome Extension for students and developers. Analyze webpages, summa
 ## License
 
 Apache 2.0
+
+## Additional
+- use specific folder for icons name folder icons and put all the icons in it 
+- use specific folder for scripts name folder scripts and put background.js and content.js in it 
